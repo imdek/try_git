@@ -1,5 +1,17 @@
 <?php
 
+
+class board{
+	private $length = 0;
+	function __construct($lng){
+		$this->length=$lng;
+		echo "Construct: ".$this->length."\n";
+	}
+	function len(){
+		return $this->length;
+	}
+}
+
 class temp{
 	var $tmp;
 
@@ -14,6 +26,10 @@ class temp{
 		echo "123";
 	}
 }
+
+
+$board1 = new board(100);
+echo "Stored ".$board1->len()."cm\n";
 
 $vector = new \Ds\Vector();
 
