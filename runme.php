@@ -1,5 +1,6 @@
 <?php
 require 'board.php';
+require 'solution.php';
 
 
 
@@ -19,21 +20,21 @@ class temp{
 }
 
 
+//Init
+$possible = new \Ds\Vector();
+$possible->push(100,120,150);
+
+$target = new \Ds\Vector();
+$target->push(45,25,15,85);
+
+$solution = new \Ds\Vector();
+
+
 $board1 = new board(100);
 echo "Stored ".$board1->len()."cm\n";
 
-$vector = new \Ds\Vector();
-
-$vector->push('a');
-$vector->push('b', 'c');
-
-$vector[] = 'd';
-
-print_r($vector);
-
-
-$vector2 = new \Ds\Vector();
-$vector2->push(new temp());
-$vector2[0]->out();
+$cut = new \Ds\Vector();
+$cut->push($board1);
+print_r($cut);
 
 ?>
