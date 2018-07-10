@@ -1,0 +1,32 @@
+<?php
+
+class temp{
+	var $tmp;
+
+	function __construct()
+	{
+		echo "const";
+		$tmp = "123";
+	}
+
+	function out()
+	{
+		echo "123";
+	}
+}
+
+$vector = new \Ds\Vector();
+
+$vector->push('a');
+$vector->push('b', 'c');
+
+$vector[] = 'd';
+
+print_r($vector);
+
+
+$vector2 = new \Ds\Vector();
+$vector2->push(new temp());
+$vector2[0]->out();
+
+?>
